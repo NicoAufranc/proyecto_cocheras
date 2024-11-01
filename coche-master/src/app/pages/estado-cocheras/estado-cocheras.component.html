@@ -1,0 +1,38 @@
+<app-header></app-header>
+
+<div class="boton-agregar">
+  <button (click)="agregarFila()" class="boton-resaltado-2" id="agregar">AGREGAR FILA</button>
+</div>
+
+<div id="tabla">
+  <div class="fila header-fila"> 
+    <div>{{ header.nro }}</div>
+    <div>{{ header.disponibilidad }}</div>
+    <div>{{ header.ingreso }}</div>
+    <div>{{ header.acciones }}</div>
+  </div>
+
+  <button (click)="abrirModalNuevoEstacionamiento(fila.id)" 
+          [disabled]="fila.deshabilitada" 
+          *ngFor="let fila of filas; let i = index" 
+          class="fila">
+    <div>{{ fila.id }}</div>
+    <div [ngClass]="{disponible: !fila.deshabilitada, ocupado: fila.deshabilitada}">{{ fila.deshabilitada ? 'No Disponible' : 'Disponible' }}</div>
+    <div>
+      {{ fila.descripcion }}
+      <button (click)="cobrarEstacionamiento(fila.id)" 
+              *ngIf="fila.deshabilitada && fila.descripcion !== 'Disponible'" 
+              class="boton-resaltado">
+        Cobrar
+      </button>
+    </div>   
+    <div>   
+      <button (click)="cambiarDisponibilidadCochera(i,$event)" class="boton-resaltado-3 primary">
+        {{ fila.deshabilitada ? 'Habilitar' : 'Deshabilitar' }}
+      </button>
+      <button (click)="eliminarFila(i,$event)" class="boton-resaltado-3">
+        Eliminar
+      </button>
+    </div>
+  </button>
+</div>

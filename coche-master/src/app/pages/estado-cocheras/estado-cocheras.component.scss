@@ -1,0 +1,129 @@
+/* General styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  #tabla {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 80%;
+    font-size: 1.1rem;
+    background-color: #FFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+  }
+  
+  .header-fila, .fila {
+    display: grid;
+    grid-template-columns: 60px 1fr 2fr 1fr;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+  }
+  
+  .header-fila {
+    font-weight: bold;
+    background-color: #034CBE;
+    color: #FFF;
+    font-size: 1.2rem;
+  }
+  
+  .fila {
+    background-color: #F9F9F9;
+    color: #333;
+  }
+  
+  .fila:hover {
+    background-color: #E6F0FF;
+    cursor: pointer;
+  }
+  
+  .header-fila div, .fila div {
+    padding: 8px 0;
+    text-align: center;
+  }
+  
+  /* Availability styling */
+  .disponible, .ocupado {
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+  
+  .disponible {
+    background-color: #03CA85;
+    color: #FFF;
+  }
+  
+  .ocupado {
+    background-color: #ff4c4c;
+    color: #FFF;
+  }
+  
+  /* Add row button */
+  .boton-agregar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .boton-resaltado-2 {
+    padding: 12px 20px;
+    background-color: #034CBE;
+    color: #FFF;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .boton-resaltado-2:hover {
+    background-color: #023a8f;
+    transform: translateY(-3px);
+  }
+  
+  /* Row buttons */
+  .boton-resaltado, .boton-resaltado-3 {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .boton-resaltado {
+    background-color: #03CA85;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+  }
+  
+  .boton-resaltado:hover {
+    background-color: #029e6b;
+  }
+  
+  .boton-resaltado-3 {
+    background-color: #ff4c4c;
+    margin: 0px 10px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+  }
+  
+  .boton-resaltado-3.primary {
+    background-color: #034CBE;
+  }
+  
+  .boton-resaltado-3:hover {
+    background-color: #7f0000;
+  }
+  
+  .primary:hover {
+    background-color: #023a8f;
+  }
+  
