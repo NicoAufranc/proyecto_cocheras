@@ -1,0 +1,160 @@
+@use "./../../../../public/styles/colores.scss/colores.scss";
+
+h1{
+    font-size: x-large;
+}
+
+.activa{
+    color: #034CBE
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 5px solid #00c98d;
+    background-color: #fff0;
+}
+
+#header h1{
+    font-family: 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    color: #034CBE;
+    margin: 5px;
+}
+
+#header a{
+    font-size: 15px;
+    font-weight: 700;
+    color: #034CBE;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.user-actions{
+    display: flex;
+    gap: 15px;
+}
+
+#tabla{
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: larger;
+    >div{
+        display: grid;
+        grid-template-columns: 50px 1fr 1fr 1fr;
+    }
+}
+
+#header-tabla, .fila{
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr 1fr;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+#header-tabla div{
+    font-weight: bold;
+}
+
+.fila div{
+    padding: 8px;
+    text-align: center;
+}
+
+.disponible{
+    background-color: #00c98d;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.deshabilitada{
+    background-color: red;
+    color: #9e9e9e;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.boton-resaltado{
+    cursor: pointer;
+    background-color:#051135;
+    color: #034CBE;
+    padding: 10px;
+    margin: 0;
+    transition: all 0.3 ease;
+    box-shadow: 0px 4px 6px #034CBE;
+}
+
+.boton-resaltado:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px white;
+}
+
+.boton-agregar{
+    border: 3px solid #051135   ;
+    display: flex;
+    justify-content: center;
+    background-color: #051135;
+    margin: 0;
+    padding: 0;
+}
+
+#agregar{
+    border: 3px solid white;
+    border-radius: 20px;
+    margin-top: 0px;
+}
+
+.boton-resaltado-2 {
+    cursor: pointer;
+    padding: 10px 15px;
+    border: 2px solid #051135;
+    background-color: #051135; 
+    color: #034CBE;
+    border-radius: 5px;
+    margin-right: 10px; 
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-size: 15px;
+}
+
+.boton-resaltado-3 {
+    cursor: pointer;
+    padding: 10px 15px;
+    margin: 10px;
+    border: 2px solid #051135;
+    background-color: #f0f0f0; 
+    color: #051135;
+    border-radius: 5px;
+    margin-right: 10px; 
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.boton-resaltado-2:hover {
+    background-color: #051135;
+    color: #034CBE;
+    border-color: #2c3e50;
+    transform: translateY(-2px)
+}
+
+.boton-resaltado-3:hover {
+    background-color: #051135;
+    color: #034CBE;
+    border-color: #2c3e50;
+    transform: translateY(-2px)
+}
+
+.boton-modal{
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
